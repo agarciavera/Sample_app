@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160701123300) do
+=======
+ActiveRecord::Schema.define(version: 20160704085741) do
+>>>>>>> rama_correccion_error
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
@@ -25,7 +29,11 @@ ActiveRecord::Schema.define(version: 20160701123300) do
     t.boolean  "activated",         default: false
     t.time     "activated_at"
     t.string   "reset_digest"
+<<<<<<< HEAD
     t.datetime "reset_send_at"
+=======
+    t.datetime "reset_sent_at"
+>>>>>>> rama_correccion_error
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -70,7 +70,11 @@ class User < ActiveRecord::Base
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
   end
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> rama_correccion_error
   private
 
     # Converts email to all lower-case.
