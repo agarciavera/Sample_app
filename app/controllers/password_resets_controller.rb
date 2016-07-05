@@ -1,8 +1,5 @@
 class PasswordResetsController < ApplicationController
-<<<<<<< HEAD
-=======
 
->>>>>>> rama_correccion_error
   before_action :get_user,   only: [:edit, :update]
   before_action :valid_user, only: [:edit, :update]
   before_action :check_expiration, only: [:edit, :update]
@@ -10,12 +7,10 @@ class PasswordResetsController < ApplicationController
   def new
   end
 
-<<<<<<< HEAD
-=======
+
   def edit
   end
 
->>>>>>> rama_correccion_error
   def create
     @user = User.find_by(email: params[:password_reset][:email].downcase)
     if @user
@@ -29,12 +24,9 @@ class PasswordResetsController < ApplicationController
     end
   end
 
-<<<<<<< HEAD
   def edit
   end
 
-=======
->>>>>>> rama_correccion_error
   def update
     if params[:user][:password].empty?
       @user.errors.add(:password, "can't be empty")
@@ -50,7 +42,6 @@ class PasswordResetsController < ApplicationController
 
   private
 
-<<<<<<< HEAD
   def user_params
     params.require(:user).permit(:password, :password_confirmation)
   end
@@ -76,7 +67,7 @@ class PasswordResetsController < ApplicationController
       redirect_to new_password_reset_url
     end
   end
-=======
+
     def user_params
       params.require(:user).permit(:password, :password_confirmation)
     end
@@ -101,6 +92,4 @@ class PasswordResetsController < ApplicationController
         redirect_to new_password_reset_url
       end
     end
-
->>>>>>> rama_correccion_error
 end
